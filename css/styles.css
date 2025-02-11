@@ -1,0 +1,87 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  body {
+    background-color: #4f4b59;
+    padding: 20px;
+    color: #333;
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    color: #ffa475;
+  }
+  
+  p {
+    color: #555;
+  }
+  .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 itens por linha */
+      gap: 20px; /* Espaçamento entre os itens */
+      justify-items: center; /* Alinha os itens no centro */
+      margin-top: 20px;
+    }
+    
+  
+    .card {
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      background-color: #ebf1cf;
+    }
+    
+    .card img {
+      width: 50%;
+      height: auto;
+      border-radius: 8px;
+    }
+    
+    .card h2 {
+      margin: 10px 0;
+    }
+    
+    .card .price {
+      font-size: 18px;
+      color: #6f803c;
+      font-weight: bold;
+    }
+  
+  @media (max-width: 600px) {
+    .grid-container {
+      grid-template-columns: 1fr;
+    }
+  }  
+
+section h1 {
+  text-align: center;
+  font-size: 28px;
+  color: #ffa475;
+  margin-bottom: 20px;
+}
+
+.top-bar {
+  text-align: center;
+  padding: 20px;
+}
+
+.top-bar h1 {
+  font-size: 32px;
+  margin: 0;
+}
+
+.top-bar p {
+  font-size: 16px;
+  color: #f7f3f2;
+}

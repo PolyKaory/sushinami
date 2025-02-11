@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas - Nami & Sushi</title>
+    <link rel="stylesheet" href="css/styles3.css">
+    <script>
+        // Validação do formulário
+        function validarFormulario() {
+            const nome = document.getElementById("nome").value;
+            const dataHora = document.getElementById("data-hora").value;
+            const numPessoas = document.getElementById("num-pessoas").value;
+
+            if (nome === "" || dataHora === "" || numPessoas === "") {
+                alert("Por favor, preencha todos os campos obrigatórios.");
+                return false;
+            }
+
+            if (numPessoas <= 0) {
+                alert("O número de pessoas deve ser maior que zero.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Nami & Sushi - Sabores do Mar</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="localizacao.html">Localização</a></li>
+                <li><a href="pratos.html">Pratos</a></li>
+                <li><a href="reservas.html">Reservas</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Faça sua Reserva</h2>
+            <p>Preencha o formulário abaixo para garantir o seu lugar no Nami & Sushi!</p>
+
+            <form action="#" method="POST" onsubmit="return validarFormulario()">
+                <div>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required placeholder="Seu nome completo">
+                </div>
+
+                <div>
+                    <label for="data-hora">Data e Hora:</label>
+                    <input type="datetime-local" id="data-hora" name="data-hora" required>
+                </div>
+
+                <div>
+                    <label for="num-pessoas">Número de Pessoas:</label>
+                    <input type="number" id="num-pessoas" name="num-pessoas" required min="1" placeholder="Ex.: 2">
+                </div>
+
+                <div>
+                    <label for="preferencias">Preferências Especiais:</label>
+                    <textarea id="preferencias" name="preferencias" rows="4" placeholder="Caso tenha alguma preferência especial (alergias, preferências alimentares, etc.)"></textarea>
+                </div>
+
+                <button type="submit">Reservar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Nami & Sushi. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
